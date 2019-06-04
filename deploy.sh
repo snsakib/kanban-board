@@ -4,12 +4,12 @@ echo "Starting script..."
 
 # Production build
 echo "Building production files..."
-ng build --prod --output-path docs --base-href /angular-pdf-viewer/
+ng build --prod --output-path docs --base-href /kanban-board/
 
 # Creating 404.html
 echo "Creating 404.html"
 cd docs
-sed -i "s/\(C:\/Program\sFiles\/Git\/angular-pdf-viewer\/\)/\/angular-pdf-viewer\//" index.html
+sed -i "s/\(C:\/Program\sFiles\/Git\/kanban-board\/\)/\/kanban-board\//" index.html
 cp index.html 404.html
 
 # Publishing to GitHub
