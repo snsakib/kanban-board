@@ -1,3 +1,26 @@
-<p>
-  kanban-board works!
-</p>
+<div cdkDropListGroup class="taskGroup">
+  <section class="taskList">
+    <mat-toolbar class="taskList-header" color="primary">TO DO</mat-toolbar>
+    <div cdkDropList [cdkDropListData]="todo" (cdkDropListDropped)="drop($event)">
+      <div *ngFor="let item of todo" cdkDrag class="listItem">
+        {{ item }}
+      </div>
+    </div>
+  </section>
+  <section class="taskList">
+    <mat-toolbar class="taskList-header" color="primary">In Progress</mat-toolbar>
+    <div cdkDropList [cdkDropListData]="inProgress" (cdkDropListDropped)="drop($event)">
+      <div *ngFor="let item of inProgress" cdkDrag class="listItem">
+        {{ item }}
+      </div>
+    </div>
+  </section>
+  <section class="taskList">
+    <mat-toolbar class="taskList-header" color="primary">Done</mat-toolbar>
+    <div cdkDropList [cdkDropListData]="done" (cdkDropListDropped)="drop($event)">
+      <div *ngFor="let item of done" cdkDrag class="listItem">
+        {{ item }}
+      </div>
+    </div>
+  </section>
+</div>
