@@ -19,15 +19,19 @@
   margin: 1rem;
 
   &-header {
-    border: 1px solid indigo;
-    justify-content: center;
+    height: 50px;
+    justify-content: space-between;
+  }
+
+  .listItem {
+    height: 40px;
+    background-color: white;
+    padding: 10px;
+    cursor: move;
+
+    &:nth-of-type(odd) {
+      background-color: #eee;
+    }
   }
 }
 
-.listItem {
-  border: 1px solid black;
-  height: 40px;
-  background-color: white;
-  padding: 10px;
-  cursor: move;
-}
